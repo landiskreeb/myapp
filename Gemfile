@@ -8,7 +8,9 @@ gem 'rails', '4.1.0'
 
 
 #gem 'sqlite3'
+gem 'sqlite3', group: :development
 gem 'pg'
+
 
 
 
