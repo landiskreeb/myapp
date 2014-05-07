@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  root 'page#index'
 
-  get ‘/about’ => 'page#about'
+
+  root 'page#index'
+  get '/about' => 'page#about'
+  get '/pictures' => 'page#pictures'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

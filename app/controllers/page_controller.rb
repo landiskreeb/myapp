@@ -5,4 +5,6 @@ class PageController < ApplicationController
   def about
   end
 
+  def pictures
+  end
 end
