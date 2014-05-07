@@ -19,6 +19,7 @@ group :production do
 end
 
 	gem 'bootstrap-sass'
+	gem 'devise'
 
 
 # Use SCSS for stylesheets
