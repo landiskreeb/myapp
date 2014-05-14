@@ -50,9 +50,13 @@
       <tr>
         <td><%= pin.description %></td>
         <td><%= time_ago_in_words pin.created_at %></td>
+        <td><%= pin.user.try( :email ) %></td>
+        <% if current_user == pin.user %>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
@@ -60,4 +64,8 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<% if user_signed_in? %>
+<%= link_to 'New Pin', new_pin_path, class: "btn btn-primary btn-lg" %>
+<% end %>
+
+
