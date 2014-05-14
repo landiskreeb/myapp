@@ -4,6 +4,6 @@ module PinsHelper
       return "has-error"
     end
 
-    return "TEST"
+    return ""
   end
 end
